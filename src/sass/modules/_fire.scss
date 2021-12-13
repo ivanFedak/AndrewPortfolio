@@ -1,0 +1,17 @@
+.fire{
+  position: relative;
+  z-index: 500;
+}
+.spark {
+  background-color: #C87867;
+  font-family: Helvetica, sans-serif;
+  visibility: hidden;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  @include adaptiv-value('width', 8, 5, 1);
+  @include adaptiv-value('height', 8, 5, 1);
+  border-radius: 30%;
+  box-shadow: 0 0 5px #8C8DAB;
+}
+
