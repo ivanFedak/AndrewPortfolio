@@ -250,7 +250,7 @@ textarea {
   font-family: Helvetica, sans-serif;
   visibility: hidden;
   position: absolute;
-  bottom: 0px;
+  bottom: 300px;
   left: 0;
   width: 8px;
   height: 8px;
@@ -789,9 +789,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -829,6 +829,7 @@ textarea {
 }
 
 .item-portfolio {
+  height: 100%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -877,6 +878,13 @@ textarea {
 }
 
 .item-portfolio__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 25px;
   width: 50%;
   position: relative;
@@ -900,6 +908,9 @@ textarea {
 }
 
 .item-portfolio__text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   color: #303030;
   font-size: 15px;
   font-weight: 500;

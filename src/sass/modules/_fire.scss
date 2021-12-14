@@ -7,7 +7,7 @@
   font-family: Helvetica, sans-serif;
   visibility: hidden;
   position: absolute;
-  bottom: 0px;
+  bottom: 300px;
   left: 0;
   @include adaptiv-value('width', 8, 5, 1);
   @include adaptiv-value('height', 8, 5, 1);

@@ -83,11 +83,27 @@ const slider = ()=>{
         grid: {
           rows: 2,
         },
-        spaceBetween: 30,
+        breakpoints: {
+          270: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+              grid: {
+                rows: 2,
+              },
+          },
+          868: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+              autoHeight: false,
+              grid: {
+                rows: 2,
+              },
+          },
+        },
         navigation: {
           nextEl: '.portfolio__next',
           prevEl: '.portfolio__prev',
-        }
+        },
       });
 };
 export default slider;
