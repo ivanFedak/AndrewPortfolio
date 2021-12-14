@@ -1,10 +1,6 @@
 const dynamicSlide = ()=>{
 
-    const slide = document.querySelector('.portfolio__slide');
-    // let slideNew;
-    // slideNew = document.createElement('div');
-    
-    let triger = true;
+    const slider = document.querySelector('.portfolio__slide');
 
 
     const slideData = [
@@ -86,9 +82,6 @@ const dynamicSlide = ()=>{
 
 
     function createSlideItems(data) {
-        let slideNew = document.createElement('div');
-        slideNew.classList.add('portfolio__slide');
-    
         data.forEach(item => {
             const {href,filter,img,label,text,type} = item;       
             //Create element
@@ -111,10 +104,7 @@ const dynamicSlide = ()=>{
             `;
             //
             slide.append(elem);
-            console.log(slide);
-            if(slide.children.length > 4){  
-                slideNew.append(elem);
-            }  
+
         });
     }
 

@@ -8,25 +8,26 @@ const filter = ()=>{
     const graphic = document.querySelectorAll('[data-filter="graphic"]');
   /////Get all
 
-  allItems.forEach(item => {
-      item.classList.add('hide');
-  });
-  console.log(allItems);
-  
-  function hideItems(item) {
-      item.classList.add('hide');
-  }
-
-  removeHide(logo);
-
-
-
-
-  function removeHide(collection) {
+    function removeHide(collection) {
       collection.forEach(item=>{
         item.classList.remove('hide');
       });
-  }
+    }
+    function addHide(collection) {
+      collection.forEach(item=>{
+        item.classList.add('hide');
+      });
+
+
+    }
+
+
+    addHide(allItems);
+    removeHide(web);
+
+
+
+
 
 };
 export default filter;

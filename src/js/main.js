@@ -1,7 +1,7 @@
 
 //////////// def
 import spoller from './libs/spoller';
-import slider from './libs/slider';
+import Slider from './libs/slider';
 import def from './services/default';
 ////////////
 
@@ -28,7 +28,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     // dynamicSlide();
     tabs();
     spoller();
-    slider();
+    Slider();
     scrollDown();
     menuScroll();
     addMore();
