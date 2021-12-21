@@ -83,6 +83,13 @@
         background: #2c2c2c
         padding: 26px
         color: #b4b4b4
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus
+            border: 1px solid #b4b4b4
+            -webkit-text-fill-color: #b4b4b4
+            -webkit-box-shadow: 0 0 0px 1000px #2c2c2c inset
+            transition: background-color 5000s ease-in-out 0s
     textarea
         @include adaptiv-value('height', 300, 200, 1)
     &__btn

@@ -5,16 +5,7 @@ const burger = ()=>{
     links = document.querySelectorAll('.menu__link'),
     menu = document.querySelector('.menu__body');
 
-    // if(links.length > 0){
-    //         links.forEach(item => {
-    //             item.addEventListener('click',function(e){
-    //                 btn.classList.remove('_active');
-    //                 menu.classList.remove('_active');
-    //                 document.body.classList.remove('_lock')
-    //             })
-    //         });
-    // }
-
+    
     function toggleMenu(trigger) {  
         trigger.addEventListener('click',function(e){
             btn.classList.toggle('_active');

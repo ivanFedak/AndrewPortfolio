@@ -44,7 +44,10 @@ const addMore = ()=>{
         });
     }
     
-    btn.addEventListener('click',() => appendItems(arrData));
+    btn.addEventListener('click',function() {
+        this.remove();
+        appendItems(arrData);
+    });
     
 };
 export default addMore;

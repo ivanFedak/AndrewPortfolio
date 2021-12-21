@@ -1,0 +1,42 @@
+.modal
+    position: fixed
+    z-index: 100000
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(39, 39, 39, 0.5)
+    display: flex
+    justify-content: center
+    align-items: center
+
+    transition: all 0.3s ease 0s
+    opacity: 0
+    visibility: hidden
+    pointer-events: none
+    &._active
+        opacity: 1
+        visibility: visible
+        pointer-events: auto
+    &__container
+        position: relative
+        top: -100%
+        left: 0
+        transition: all 0.3s ease 0s
+        ._active & //Коли родителю добавляеся клас '_active'
+            top: 0
+    &__content
+        display: flex
+        align-items: center
+        padding: 50px
+        border-radius: 2px
+        background: #b69b67
+
+    &__text
+        color: #303030
+        @include adaptiv-value('font-size', 35, 20, 1)
+        &:not(:last-child)
+            padding-left: 20px
+    &__status
+        color: #303030
+        @include adaptiv-value('font-size', 35, 20, 1)

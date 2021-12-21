@@ -1,30 +1,47 @@
 const form = ()=>{
   
-    const forms = document.querySelectorAll('form');
+    const forms = document.querySelectorAll('form'),
+          modal = document.querySelector('.modal'),
+          modalText = document.querySelector('.modal__text');
+
+    function showModal(text) {
+        modalText.textContent = text;
+        modal.classList.add('_active');
+        setTimeout(() => {
+            modal.classList.remove('_active');
+        }, 2000);
+    }
+
 
     forms.forEach(form => {
-        postData(form);
+        bindPostData(form);
     });
     
 
-    function postData(form) {
-        form.addEventListener('submit',function(e){
-            e.preventDefault();
-            
-            const formData = new FormData(form);
+    const postData = async (url,data) =>{ 
+        const res = await fetch(url,{
+            method: 'POST',
+            body: data
+        });
 
-            fetch('./php/server.php',{
-                method: 'POST',
-                body: formData
-            }).then(data => data.text())
+        if(!res.ok){throw new Error(`Could not fetch ${url} ${res.status}`);}
+
+        return await res.text();
+    };
+
+    function bindPostData(form) {
+        form.addEventListener('submit',function(e){
+
+            e.preventDefault();
+            const formData = new FormData(form);
+            postData('./php/server.php', formData)
             .then((data)=>{
                 console.log(data);
-               
-            })
-            .catch(e=>console.log(e))
-            .finally(()=>{
                 form.reset(); 
-               
+                showModal('Все успешно отправилось!');
+            })
+            .catch(()=>{
+                showModal('Произошла ошибка!');
             });
         });
     }

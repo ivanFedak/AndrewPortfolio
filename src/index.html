@@ -292,8 +292,8 @@
                         <div class="feedback__contact contact-feedback">
                             <h2 class="contact-feedback__title _title">contact us</h2>
                             <form action="#" method="post" class="contact-feedback__form">
-                                <input required autocomplete='off' type='text' name='name' class='contact-feedback__input' placeholder="Name">
-                                <input required autocomplete='off' type='email' name='email' class='contact-feedback__input' placeholder="Email">
+                                <input required  type='text' name='name' class='contact-feedback__input' placeholder="Name">
+                                <input required  type='email' name='email' class='contact-feedback__input' placeholder="Email">
                                 <textarea required name="message" class="contact-feedback__input" placeholder="Your message"></textarea>
                                 <button class="contact-feedback__btn">send</button>
                             </form>
@@ -371,6 +371,16 @@
 
 
     <!-- Modals and all the stuff -->
+
+    <div class="modal">
+        <div class='modal__container'>
+            <div class="modal__content">
+                <div class="modal__text">Все успешно отправилось!</div>
+                <div class="modal__status"></div>
+            </div>
+        </div>
+    </div>
+
 
 
     @@include('_scripts.html')
