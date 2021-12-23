@@ -23,9 +23,6 @@ const form = ()=>{
             method: 'POST',
             body: data
         });
-
-        if(!res.ok){throw new Error(`Could not fetch ${url} ${res.status}`);}
-
         return await res.text();
     };
 
