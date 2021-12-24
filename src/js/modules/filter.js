@@ -1,30 +1,40 @@
 const filter = ()=>{
-    const allItems = document.querySelectorAll('.item-portfolio');
-    const web = document.querySelectorAll('[data-filter="web"]');
-    const logo = document.querySelectorAll('[data-filter="logo"]');
-    const branding = document.querySelectorAll('[data-filter="branding"]');
-    const ui = document.querySelectorAll('[data-filter="ui"]');
-    const photography = document.querySelectorAll('[data-filter="photography"]');
-    const graphic = document.querySelectorAll('[data-filter="graphic"]');
-  /////Get all
-
-    function removeHide(collection) {
-      collection.forEach(item=>{
-        item.classList.remove('hide');
-      });
-    }
-    function addHide(collection) {
-      collection.forEach(item=>{
-        item.classList.add('hide');
-      });
+    
+  
+  const allBtns = document.querySelectorAll('.portfolio__options');
+  const allItems = document.querySelectorAll('.item-portfolio');
 
 
-    }
+  function hideAll(){
+    allItems.forEach(item=>{
+		item.classList.add('_hide');
+	});
+  }
+
+  function showCurrent(kind) {
+    allItems.forEach(item=>{
+		if(item.dataset.filter == kind){
+			item.classList.remove('_hide');
+		}
+    });
+  }
+
+  allBtns.forEach(btn=>{
+    btn.addEventListener('click', function(e){
+      	const kind = e.target.dataset.filter;
+      	hideAll();
+		showCurrent(kind);
+    });
+  });
 
 
-    addHide(allItems);
-    removeHide(web);
 
+  //Show all
+  document.querySelector('[data-filter="all"').addEventListener('click',()=>{
+    allItems.forEach(item=>{
+		item.classList.remove('_hide');
+	});
+  });
 
 
 

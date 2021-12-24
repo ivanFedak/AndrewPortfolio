@@ -13,7 +13,7 @@ import serveFun from './components/serveFun';
 import tween from './modules/TweenMax.min';
 import fire from './modules/fire';
 import form from './modules/form';
-
+import filter from './modules/filter';
 
 window.addEventListener('DOMContentLoaded',()=>{
     def();
@@ -23,11 +23,11 @@ window.addEventListener('DOMContentLoaded',()=>{
     // dynamicSlide();
     tabs();
     spoller();
-    Slider();
+    // Slider();
     scrollDown();
     menuScroll();
     addMore();
     serveFun();
     form();
-    // filter();
+    filter();
 });

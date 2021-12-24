@@ -1,4 +1,5 @@
-    const project_folder = "/Applications/MAMP/htdocs/portfolio";
+    // const project_folder = "/Applications/MAMP/htdocs/portfolio";
+    const project_folder = "dist";
     const source_folder = "src";
 
 
