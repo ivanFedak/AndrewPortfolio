@@ -6,28 +6,24 @@ import burger from './modules/burger';
 import tabs from './modules/tabs';
 import scrollDown from './modules/scrollDown';
 import menuScroll from './modules/menuScroll';
-// import filter from './modules/filter';
 import addMore from './modules/addMore';
-import dynamicSlide from './components/dynamicSlide';
-import serveFun from './components/serveFun';
-import tween from './modules/TweenMax.min';
-import fire from './modules/fire';
+import tween from './libs/TweenMax.min';
+import fire from './libs/fire';
 import form from './modules/form';
 import filter from './modules/filter';
 
 window.addEventListener('DOMContentLoaded',()=>{
     def();
-    burger();
     tween();
     fire();
-    // dynamicSlide();
-    tabs();
-    spoller();
     // Slider();
+    spoller();
+
+    burger();
+    tabs();
     scrollDown();
     menuScroll();
     addMore();
-    serveFun();
     form();
     filter();
 });

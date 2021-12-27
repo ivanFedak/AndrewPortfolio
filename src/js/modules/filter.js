@@ -23,7 +23,7 @@ const filter = ()=>{
     btn.addEventListener('click', function(e){
       	const kind = e.target.dataset.filter;
       	hideAll();
-		showCurrent(kind);
+		    showCurrent(kind);
     });
   });
 
