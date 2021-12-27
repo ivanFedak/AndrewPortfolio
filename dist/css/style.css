@@ -900,6 +900,15 @@ textarea {
   width: 100%;
 }
 
+.portfolio__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
 .portfolio__wrapper:not(:last-child) {
   margin-bottom: 50px;
 }
@@ -939,6 +948,9 @@ textarea {
 }
 
 .item-portfolio {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 49.29%;
+          flex: 0 1 49.29%;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -984,6 +996,10 @@ textarea {
   z-index: 1;
   width: 100%;
   height: 100%;
+}
+
+.item-portfolio__image img {
+  display: block;
 }
 
 .item-portfolio__content {
