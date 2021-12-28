@@ -24,6 +24,18 @@ const filter = ()=>{
       	const kind = e.target.dataset.filter;
       	hideAll();
 		    showCurrent(kind);
+        var swiper = new Swiper(".mySwiper", {
+          slidesPerView: 2,
+          grid: {
+            rows: 2,
+          },
+          spaceBetween: 30,
+              navigation: {
+                  nextEl: '.portfolio__next',
+                  prevEl: '.portfolio__prev',
+              },
+          });
+          document.querySelector('.portfolio__select').click();
     });
   });
 

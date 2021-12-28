@@ -977,6 +977,7 @@ textarea {
   position: relative;
   z-index: 2;
   background-color: #b69b67;
+  overflow: hidden;
 }
 
 .item-portfolio__label {
@@ -1650,6 +1651,23 @@ textarea {
         -ms-flex-pack: center;
             justify-content: center;
   }
+
+  .item-portfolio__content {
+    width: 100%;
+    height: 55%;
+    padding: 10px;
+  }
+
+  .item-portfolio__label:not(:last-child) {
+    margin-bottom: 20px;
+    margin: 0 0 0 0;
+  }
+}
+
+@media (max-width: 991.98px) and (max-width: 1560px) {
+  .item-portfolio__label:not(:last-child) {
+    margin-bottom: calc(10px + 10 * ((100vw - 320px) / 1240));
+  }
 }
 
 @media (max-width: 850px) {
@@ -1707,10 +1725,6 @@ textarea {
     top: 80%;
     left: 0;
     max-width: 380px;
-  }
-
-  .item-portfolio__content {
-    width: 50%;
   }
 
   .feedback__body {
@@ -1776,12 +1790,6 @@ textarea {
 
   .item-portfolio {
     height: 250px;
-  }
-
-  .item-portfolio__content {
-    width: 100%;
-    height: 55%;
-    padding: 10px;
   }
 
   .people-feedback__image {

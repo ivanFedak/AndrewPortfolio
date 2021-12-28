@@ -25,5 +25,5 @@ window.addEventListener('DOMContentLoaded',()=>{
     menuScroll();
     addMore();
     form();
-    filter();
+    // filter();
 });
