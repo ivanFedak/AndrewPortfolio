@@ -1,17 +1,18 @@
 
 .light
-    position: absolute
+    position: relative
     top: -100%
-    left: 50%
-    transform: translateX(-50%) scale(2)
     transition: all 1s ease 0s
     display: flex
+    height: 250px
+    align-items: center
     justify-content: center
     animation-name: lamps
     animation-duration: 1s
     animation-fill-mode: forwards
+    transform: scale(2)
     @media (max-width: $md3 + px) //Less 768
-        transform: translateX(-50%) scale(1.6)
+        transform: scale(1.6)
 .bulb
     position: relative
     width: 80px
@@ -58,7 +59,7 @@
     left: calc(50% - 2px)
     bottom: 50%
     width: 4px
-    height: 60vh
+    height: 160vh
     background: #000
     z-index: 1
 
@@ -75,7 +76,7 @@
             background: radial-gradient(rgba(85, 85, 85, 0.5),rgba(17, 17, 17, 0.5))
         .bulb
             background: #FFCD75
-            box-shadow: 0 0 50px rgba(255, 204, 117, 0.4),0 0 100px rgba(255, 204, 117, 0.4),0 0 150px rgba(255, 204, 117, 0.4),0 0 200px rgba(255, 204, 117, 0.4),0 0 250px rgba(255, 204, 117, 0.4)
+            box-shadow: 0 0 50px rgba(255, 204, 117, 0.4),0 0 50px rgba(255, 204, 117, 0.4),0 0 150px rgba(255, 204, 117, 0.4),0 0 200px rgba(255, 204, 117, 0.4),0 0 250px rgba(255, 204, 117, 0.4)
             @media (max-width: $md3 + px) //Less 768
                 box-shadow: 0 0 25px rgba(255, 204, 117, 0.4),0 0 50px rgba(255, 204, 117, 0.4),0 0 75px rgba(255, 204, 117, 0.4),0 0 100px rgba(255, 204, 117, 0.4),0 0 125px rgba(255, 204, 117, 0.4)    
             @media (max-width: $md4 + px) //Less 47.
@@ -106,6 +107,6 @@
     0%
         top: -100%
     100%
-        top: 40%
+        top: 0%
 
  

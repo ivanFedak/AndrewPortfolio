@@ -3375,13 +3375,14 @@ const form = () => {
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-const lamp = () => {// const btn = document.querySelector('.btn');
-  // setTimeout(() => {
-  //     document.querySelector('.wrapper').classList.toggle('_active');
-  //     setInterval(() => {
-  //         document.querySelector('.wrapper').classList.toggle('_active'); 
-  //     }, 800);
-  // }, 1100);
+const lamp = () => {
+  const btn = document.querySelector('.btn');
+  setTimeout(() => {
+    document.querySelector('.wrapper').classList.toggle('_active');
+    setInterval(() => {
+      document.querySelector('.wrapper').classList.toggle('_active');
+    }, 800);
+  }, 1100);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (lamp);
