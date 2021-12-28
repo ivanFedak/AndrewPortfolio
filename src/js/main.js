@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded',()=>{
     def();
     tween();
     fire();
-    // Slider();
+    Slider();
     spoller();
 
     burger();

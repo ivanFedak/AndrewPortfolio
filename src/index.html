@@ -7,6 +7,57 @@
     <title>Landing</title>
 
     <link rel="stylesheet" href="./css/style.min.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      background: #2c2c2c;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      height: 265px;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
 </head>
 <body>
   
@@ -133,8 +184,8 @@
                         </ul>
                     </div>
 
-                    <div class="portfolio__slider">
-                        <div class="portfolio__wrapper">
+                    <div class="swiper mySwiper">
+                        <div class="portfolio__wrapper swiper-wrapper">
 
                         
                             <a href="linkToWork" data-filter="web" class="item-portfolio swiper-slide">
@@ -145,6 +196,16 @@
                                     <div class="item-portfolio__label">subsence monochrome</div>
                                     <div class="item-portfolio__text">Web design in monochromatic colors for SUBSENCE agency.</div>
                                     <div class="item-portfolio__type">web design</div>
+                                </div>
+                            </a>
+                            <a href="linkToWork" data-filter="photography" class="item-portfolio swiper-slide">
+                                <div class="item-portfolio__image _ibg">
+                                    <img src="./img/portfolio/03.png" alt="">
+                                </div>
+                                <div class="item-portfolio__content">
+                                    <div class="item-portfolio__label">fixedgear shop photoshoot</div>
+                                    <div class="item-portfolio__text">Photoshoot for the annual issue of the fixed gear and road bikes magazine.</div>
+                                    <div class="item-portfolio__type">photography </div>
                                 </div>
                             </a>
 
@@ -204,16 +265,6 @@
                                 </div>
                             </a>
 
-                            <a href="linkToWork" data-filter="photography" class="item-portfolio swiper-slide">
-                                <div class="item-portfolio__image _ibg">
-                                    <img src="./img/portfolio/03.png" alt="">
-                                </div>
-                                <div class="item-portfolio__content">
-                                    <div class="item-portfolio__label">fixedgear shop photoshoot</div>
-                                    <div class="item-portfolio__text">Photoshoot for the annual issue of the fixed gear and road bikes magazine.</div>
-                                    <div class="item-portfolio__type">photography </div>
-                                </div>
-                            </a>
 
                             <a href="linkToWork" data-filter="graphic" class="item-portfolio swiper-slide">
                                 <div class="item-portfolio__image _ibg">
