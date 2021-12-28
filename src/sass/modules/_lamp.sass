@@ -1,0 +1,111 @@
+
+.light
+    position: absolute
+    top: -100%
+    left: 50%
+    transform: translateX(-50%) scale(2)
+    transition: all 1s ease 0s
+    display: flex
+    justify-content: center
+    animation-name: lamps
+    animation-duration: 1s
+    animation-fill-mode: forwards
+    @media (max-width: $md3 + px) //Less 768
+        transform: translateX(-50%) scale(1.6)
+.bulb
+    position: relative
+    width: 80px
+    height: 80px
+    background: #444
+    border-radius: 50%
+    z-index: 2000
+    &::before
+        content: ''
+        position: absolute
+        top: -50px
+        left: 22.5px
+        width: 35px
+        height: 80px
+        background: #444
+        border-top: 30px solid #000
+        border-radius: 10px
+    span
+        &:nth-child(1)
+            position: absolute
+            top: -16px
+            left: -3px
+            display: block
+            width: 30px
+            height: 30px
+            background: transparent
+            transform: rotate(342deg)
+            border-bottom-right-radius: 40px
+            box-shadow: 20px 20px 0 10px #444
+        &:nth-child(2)
+            position: absolute
+            top: -16px
+            right: -4px
+            display: block
+            width: 30px
+            height: 30px
+            background: transparent
+            transform: rotate(17deg)
+            border-bottom-left-radius: 40px
+            box-shadow: -20px 20px 0 10px #444
+
+.wire
+    position: absolute
+    left: calc(50% - 2px)
+    bottom: 50%
+    width: 4px
+    height: 60vh
+    background: #000
+    z-index: 1
+
+.switch
+    position: absolute
+    z-index: 20
+    bottom: -80px
+    right: -150px
+
+
+.wrapper
+    &._active
+        .main
+            background: radial-gradient(rgba(85, 85, 85, 0.5),rgba(17, 17, 17, 0.5))
+        .bulb
+            background: #FFCD75
+            box-shadow: 0 0 50px rgba(255, 204, 117, 0.4),0 0 100px rgba(255, 204, 117, 0.4),0 0 150px rgba(255, 204, 117, 0.4),0 0 200px rgba(255, 204, 117, 0.4),0 0 250px rgba(255, 204, 117, 0.4)
+            @media (max-width: $md3 + px) //Less 768
+                box-shadow: 0 0 25px rgba(255, 204, 117, 0.4),0 0 50px rgba(255, 204, 117, 0.4),0 0 75px rgba(255, 204, 117, 0.4),0 0 100px rgba(255, 204, 117, 0.4),0 0 125px rgba(255, 204, 117, 0.4)    
+            @media (max-width: $md4 + px) //Less 47.
+                box-shadow: 0 0 5px rgba(255, 204, 117, 0.4),0 0 10px rgba(255, 204, 117, 0.4),0 0 15px rgba(255, 204, 117, 0.4),0 0 20px rgba(255, 204, 117, 0.4),0 0 25px rgba(255, 204, 117, 0.4)    
+            
+            &::after
+                content: ''
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%,-50%)
+                width: 120px
+                height: 120px
+                background: #FFCD75
+                border-radius: 50%
+                filter: blur(40px)
+                z-index: 3
+            &::before
+                background: #FFCD75
+            span
+                &:nth-child(1)
+                    box-shadow: 20px 20px 0 10px #FFCD75
+                &:nth-child(2)
+                    box-shadow: -20px 20px 0 10px #FFCD75
+
+
+@keyframes lamps
+    0%
+        top: -100%
+    100%
+        top: 40%
+
+ 
