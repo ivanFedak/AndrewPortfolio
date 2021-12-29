@@ -3377,9 +3377,8 @@ const form = () => {
 __webpack_require__.r(__webpack_exports__);
 const lamp = () => {
   setInterval(() => {
-    document.querySelector('.main').classList.toggle('_active');
-    document.querySelector('.main__image').classList.toggle('_active');
-  }, 500);
+    document.querySelector('.wrapper').classList.toggle('_active'); // document.querySelector('.main__image').classList.toggle('_active');
+  }, 700);
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (lamp);
