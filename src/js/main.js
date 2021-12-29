@@ -11,6 +11,7 @@ import tween from './libs/TweenMax.min';
 import fire from './libs/fire';
 import form from './modules/form';
 import filter from './modules/filter';
+import lamp from './modules/lamp';
 
 window.addEventListener('DOMContentLoaded',()=>{
     def();
@@ -25,5 +26,6 @@ window.addEventListener('DOMContentLoaded',()=>{
     menuScroll();
     addMore();
     form();
+    lamp();
     // filter();
 });
